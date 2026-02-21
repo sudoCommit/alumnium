@@ -13,6 +13,7 @@ class SessionRequest(VersionedModel):
     provider: str
     name: str | None = None
     tools: list[dict[str, Any]]
+    planner: bool = True
 
 
 class SessionResponse(VersionedModel):
@@ -38,6 +39,7 @@ class StepRequest(VersionedModel):
 
 
 class StepResponse(VersionedModel):
+    explanation: str
     actions: list[dict[str, Any]]
 
 

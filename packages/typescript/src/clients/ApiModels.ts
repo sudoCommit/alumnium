@@ -11,6 +11,7 @@ export interface SessionRequest {
   name?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tools: { [key: string]: any }[];
+  planner?: boolean;
 }
 
 export interface SessionResponse {
@@ -36,6 +37,7 @@ export interface StepRequest {
 }
 
 export interface StepResponse {
+  explanation: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   actions: { [key: string]: any }[];
 }
